@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.9+commit.e5eed63a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "prototype",
+						"type": "address"
+					}
+				],
+				"name": "clone",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "proxy",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ERC20V3SimpleFactory.sol": "CloneFactory"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ERC20V3SimpleFactory.sol": {
+			"keccak256": "0xd9ea0ed24848206477da9ffc9f4937ede4ab080484469ee4a66b929a53470a69",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://06937d162b063f60f3c827eba80dda9df03c1f35dc588c23a490ffbd215cab78",
+				"dweb:/ipfs/Qmeh5fWijQzDLoGm2wJZgvy9mcGmENLnbJJzxpMKMjdyLs"
+			]
+		}
+	},
+	"version": 1
+}
