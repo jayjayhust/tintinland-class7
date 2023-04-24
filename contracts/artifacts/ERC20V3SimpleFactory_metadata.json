@@ -381,11 +381,11 @@
 	},
 	"sources": {
 		"contracts/ERC20V3SimpleFactory.sol": {
-			"keccak256": "0xd9ea0ed24848206477da9ffc9f4937ede4ab080484469ee4a66b929a53470a69",
+			"keccak256": "0xd425d75d3cc156cb51b420125d2be1b56407d789ebc15b5202503f74c43af1b5",
 			"license": "Apache-2.0",
 			"urls": [
-				"bzz-raw://06937d162b063f60f3c827eba80dda9df03c1f35dc588c23a490ffbd215cab78",
-				"dweb:/ipfs/Qmeh5fWijQzDLoGm2wJZgvy9mcGmENLnbJJzxpMKMjdyLs"
+				"bzz-raw://3f635521c11dbe60959e8baf1e6cdec9fd8ad4ef78e58ca3a1ee8708d5d5cddf",
+				"dweb:/ipfs/QmeqFXmboVTovkEJWfz54Rnfub9mWZXHqz4bvoXSLsp1qA"
 			]
 		}
 	},
