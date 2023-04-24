@@ -143,7 +143,7 @@ contract ERC20V3SimpleFactory is InitializableOwnable {
 
     // ERC20V3SimpleFactory contract address: https://goerli.etherscan.io/address/0x245380b0f26d69879260b7e60f5e4041473c6666
     constructor(
-        // cloneFactory contract address(contract CloneFactory) https://goerli.etherscan.io/address/0x15c50441417b441cbb3a43d858e5f1c0a164d5ad
+        // cloneFactory contract address(contract CloneFactory) https://goerli.etherscan.io/address/0xbd96554c4dafa541ee070d35ff6b65d2d6a0b1c2
         address cloneFactory, 
         // erc20Template contract address(can be ERC20TokenABC.sol) https://goerli.etherscan.io/address/0x9a797c9eff86a3ba50712b0a1ae5c42b5a66b550
         address erc20Template, 
