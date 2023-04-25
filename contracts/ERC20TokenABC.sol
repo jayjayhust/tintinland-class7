@@ -6,14 +6,13 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol"; // 对openzeppelin标准
 //import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 //import "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol";
 import "@openzeppelin/contracts/utils/Context.sol";
-import "./ERC20V3SimpleFactory.sol";
 
 /**
  * @dev Extension of {ERC20} that allows token holders to destroy both their own
  * tokens and those that they have an allowance for, in a way that can be
  * recognized off-chain (via event analysis).
  */
-contract ERC20TokenABC is Context, ERC20, IStdERC20 {
+contract ERC20TokenABC is Context, ERC20 {
     // - 支持项目方增发的功能
     // - 支持销毁的功能
     // - 支持交易收取手续费至项目方配置的地址
@@ -29,15 +28,6 @@ contract ERC20TokenABC is Context, ERC20, IStdERC20 {
      * construction.
      */
     constructor(string memory name_, string memory symbol_, uint256 totalSupply_) ERC20(name_, symbol_, totalSupply_) {}
-
-    function init(
-        address _creator,
-        string memory _name,
-        string memory _symbol,
-        uint256 _totalSupply
-    ) external { // external 与public 类似，只不过这些函数只能在合约之外调用 - 它们不能被合约内的其他函数调用
-        super.init(_name, _symbol, _totalSupply);
-    }
 
     /**
      * @dev Returns the name of the token.

@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.9+commit.e5eed63a"
+		"version": "0.8.7+commit.e28d00a7"
 	},
 	"language": "Solidity",
 	"output": {
@@ -53,11 +53,11 @@
 	},
 	"sources": {
 		"contracts/ERC20V3SimpleFactory.sol": {
-			"keccak256": "0xd425d75d3cc156cb51b420125d2be1b56407d789ebc15b5202503f74c43af1b5",
+			"keccak256": "0x131c3581456416c5e51941ce4875fcf65934934fd457ff77213289f36b89ebe5",
 			"license": "Apache-2.0",
 			"urls": [
-				"bzz-raw://3f635521c11dbe60959e8baf1e6cdec9fd8ad4ef78e58ca3a1ee8708d5d5cddf",
-				"dweb:/ipfs/QmeqFXmboVTovkEJWfz54Rnfub9mWZXHqz4bvoXSLsp1qA"
+				"bzz-raw://cedf2b5239869408e627b574f2b2c2ac09e90ba4821fb70d717015b6a0c3157c",
+				"dweb:/ipfs/QmWQdp1bRjWeLK8gSL9vhxZbCZRHtvxqPm1PCgfcYGFUAY"
 			]
 		}
 	},

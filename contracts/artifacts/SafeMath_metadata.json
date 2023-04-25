@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.9+commit.e5eed63a"
+		"version": "0.8.7+commit.e28d00a7"
 	},
 	"language": "Solidity",
 	"output": {
@@ -21,7 +21,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/DODOMine.sol": "SafeMath"
+			"contracts/InitializableERC20.sol": "SafeMath"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -35,12 +35,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/DODOMine.sol": {
-			"keccak256": "0xb982d93609d8e7be9763a49c8c8887887f5661696c1d5aaba8701e3c279c076b",
+		"contracts/InitializableERC20.sol": {
+			"keccak256": "0x612796eb5dfa48bdff955b49b3f950f12b560dea2635b94fdb49060377d7c5d0",
 			"license": "Apache-2.0",
 			"urls": [
-				"bzz-raw://e0b82dd8f5a91f4b98239fd7306ea937b03504ca6a3c1a5d2f9ae67f22923588",
-				"dweb:/ipfs/QmQCFBirbyYeqyuLiwU8MfTisz8zmM9nCSTFTzZVRynseq"
+				"bzz-raw://47f86c662e319b81362df3678a7814a6992f8c6b2cbd1e6a026197aabd5195a4",
+				"dweb:/ipfs/QmRghnz6U3AsgLCDqRRrbwME8aNc94SsYoxJxntdBakNUF"
 			]
 		}
 	},

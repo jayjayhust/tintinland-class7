@@ -92,23 +92,14 @@ contract InitializableOwnable {
 
 // File: contracts/Factory/ERC20V3Factory.sol
 
-// interface IStdERC20 {
-//     function init(
-//         address _creator,
-//         uint256 _totalSupply,
-//         string memory _name,
-//         string memory _symbol,
-//         uint8 _decimals
-//     ) external;
-// }
-
 interface IStdERC20 {
     function init(
         address _creator,
+        uint256 _totalSupply,
         string memory _name,
         string memory _symbol,
-        uint256 _totalSupply
-    ) external; // external 与public 类似，只不过这些函数只能在合约之外调用 - 它们不能被合约内的其他函数调用
+        uint8 _decimals
+    ) external;
 }
 
 /**
@@ -141,11 +132,11 @@ contract ERC20V3SimpleFactory is InitializableOwnable {
 
     receive() external payable {}
 
-    // ERC20V3SimpleFactory contract address: https://goerli.etherscan.io/address/0x245380b0f26d69879260b7e60f5e4041473c6666
+    // ERC20V3SimpleFactory contract address: https://goerli.etherscan.io/address/0xa1d137d17fc8b7a5e1d7d5fdf6cc73573bfd7227
     constructor(
         // cloneFactory contract address(contract CloneFactory) https://goerli.etherscan.io/address/0xbd96554c4dafa541ee070d35ff6b65d2d6a0b1c2
         address cloneFactory, 
-        // erc20Template contract address(can be ERC20TokenABC.sol) https://goerli.etherscan.io/address/0x9a797c9eff86a3ba50712b0a1ae5c42b5a66b550
+        // erc20Template contract address(can be InitializableERC20.sol) https://goerli.etherscan.io/address/0xa14f5015bc1f6b91476bf95e9816af68b88a6a05
         address erc20Template, 
         uint256 createFee
     // ) public { // // 0.6.9->0.8.7，需要修订下逻辑，修订方法如下（去掉public）
@@ -158,16 +149,15 @@ contract ERC20V3SimpleFactory is InitializableOwnable {
     /**
      * @dev Create an ERC20 token.
      */
-    function createStdERC20(
+    function createStdERC20( // https://goerli.etherscan.io/tx/0x365785f360c60d47537ce7b300ebe4bca5402712c41b6734350e57ab1fcf052a
         string memory name,
         string memory symbol,
-        uint256 totalSupply
-        // uint8 decimals
+        uint256 totalSupply,
+        uint8 decimals
     ) external payable returns (address newERC20) {
         require(msg.value >= _CREATE_FEE_, "CREATE_FEE_NOT_ENOUGH");
         newERC20 = ICloneFactory(_CLONE_FACTORY_).clone(_ERC20_TEMPLATE_); // _CLONE_FACTORY_对应的合约要有clone方法!!!(本文件的contract CloneFactory)
-        // IStdERC20(newERC20).init(msg.sender, totalSupply, name, symbol, decimals);
-        IStdERC20(newERC20).init(msg.sender, name, symbol, totalSupply); // _ERC20_TEMPLATE_对应的合约要实现IStdERC20接口(且实现其中的init方法)
+        IStdERC20(newERC20).init(msg.sender, totalSupply, name, symbol, decimals);
         _USER_STD_REGISTRY_[msg.sender].push(newERC20);
         emit NewERC20(newERC20, msg.sender, 0);
     }

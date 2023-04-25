@@ -49,7 +49,7 @@
 		},
 		"gasEstimates": null,
 		"methodIdentifiers": {
-			"init(address,string,string,uint256)": "d2209ad9"
+			"init(address,uint256,string,string,uint8)": "fc90ef18"
 		}
 	},
 	"abi": [
@@ -59,6 +59,11 @@
 					"internalType": "address",
 					"name": "_creator",
 					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_totalSupply",
+					"type": "uint256"
 				},
 				{
 					"internalType": "string",
@@ -71,9 +76,9 @@
 					"type": "string"
 				},
 				{
-					"internalType": "uint256",
-					"name": "_totalSupply",
-					"type": "uint256"
+					"internalType": "uint8",
+					"name": "_decimals",
+					"type": "uint8"
 				}
 			],
 			"name": "init",

@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.9+commit.e5eed63a"
+		"version": "0.8.7+commit.e28d00a7"
 	},
 	"language": "Solidity",
 	"output": {
@@ -232,34 +232,6 @@
 					{
 						"internalType": "uint256",
 						"name": "totalSupply_",
-						"type": "uint256"
-					}
-				],
-				"name": "init",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_creator",
-						"type": "address"
-					},
-					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "_symbol",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_totalSupply",
 						"type": "uint256"
 					}
 				],
@@ -552,19 +524,11 @@
 			]
 		},
 		"contracts/ERC20TokenABC.sol": {
-			"keccak256": "0xd301d2af4712c37fb4be57b6db0d357ccaf26a10af4238baefaba949b655d940",
+			"keccak256": "0xfc44c61c186a88541709c2135e80fca813facd90dbdce9bf66f3e7589c9014f6",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://dd93ec11fc6dae306f5d80a8c5d035670b94cf4162b2e4281be1648cdab9b6b6",
-				"dweb:/ipfs/Qmd92Eid1JB777wJztne27Q74FkdwHcK2zk8ftgh1hzoq5"
-			]
-		},
-		"contracts/ERC20V3SimpleFactory.sol": {
-			"keccak256": "0x1714624376159cc9abfcd60daab66451a1db3258c741eca5423d01de506cae28",
-			"license": "Apache-2.0",
-			"urls": [
-				"bzz-raw://fa8cc56af0cce46af0d3ebb309eb23c614332db78cb6c1a790cca64cbcf39b12",
-				"dweb:/ipfs/QmRhYcMRdPXzsNKB2xGQEjTZdgSfocxVBDnuqXi7ZsrxmL"
+				"bzz-raw://f11b6bb744e1b0370826c60db0dd6200e44436c86db0837eed8c99b923f1d1a7",
+				"dweb:/ipfs/Qmb4MeomnuE5xYEBmd7r9bfQmgHe8ALzTppNjB3pZTUSjb"
 			]
 		}
 	},
