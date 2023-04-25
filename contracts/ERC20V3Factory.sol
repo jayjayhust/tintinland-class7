@@ -145,10 +145,10 @@ contract ERC20V3Factory is InitializableOwnable {
     receive() external payable {}
 
     constructor(
-        address cloneFactory,
-        address erc20Template,
-        address customErc20Template,
-        address customMintableErc20Template,
+        address cloneFactory, // 0x5E5a7b76462E4BdF83Aa98795644281BdbA80B88
+        address erc20Template, // 0x8443a5bD91C8f68582F90dD3354f750900C5E8Cc
+        address customErc20Template, // 0xf439E39614c304Aa218345a538c92756484BF75b
+        address customMintableErc20Template, // 0x234E86cfD20962aE802AaFE38590EC84372fd4e5
         uint256 createFee
     // ) public { // // 0.6.9->0.8.7，需要修订下逻辑，修订方法如下（去掉public）
     ) {
