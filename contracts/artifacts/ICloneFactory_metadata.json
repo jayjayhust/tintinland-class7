@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.7+commit.e28d00a7"
+		"version": "0.8.19+commit.7dd6d404"
 	},
 	"language": "Solidity",
 	"output": {
@@ -38,9 +38,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/ERC20V3SimpleFactory.sol": "ICloneFactory"
+			"contracts/ERC20V3Factory.sol": "ICloneFactory"
 		},
-		"evmVersion": "london",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -52,12 +52,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/ERC20V3SimpleFactory.sol": {
-			"keccak256": "0x131c3581456416c5e51941ce4875fcf65934934fd457ff77213289f36b89ebe5",
-			"license": "Apache-2.0",
+		"contracts/ERC20V3Factory.sol": {
+			"keccak256": "0x2504609acca5b49d5739ed1c01916f464fd457a5465ddd04a63a7cba03d8f388",
+			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://cedf2b5239869408e627b574f2b2c2ac09e90ba4821fb70d717015b6a0c3157c",
-				"dweb:/ipfs/QmWQdp1bRjWeLK8gSL9vhxZbCZRHtvxqPm1PCgfcYGFUAY"
+				"bzz-raw://70c658efb83de04a1cdef799474ff63eed5b96658ef0faade4965aa49ce05e98",
+				"dweb:/ipfs/QmfPWeAGg9mbggNwY2rZZKLVJZrhsePHmHRcfgZZxzRUa3"
 			]
 		}
 	},

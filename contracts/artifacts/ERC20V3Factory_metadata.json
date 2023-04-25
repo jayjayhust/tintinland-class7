@@ -18,6 +18,16 @@
 						"type": "address"
 					},
 					{
+						"internalType": "address",
+						"name": "customErc20Template",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "customMintableErc20Template",
+						"type": "address"
+					},
+					{
 						"internalType": "uint256",
 						"name": "createFee",
 						"type": "uint256"
@@ -37,6 +47,32 @@
 					}
 				],
 				"name": "ChangeCreateFee",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "newCustomMintableTemplate",
+						"type": "address"
+					}
+				],
+				"name": "ChangeCustomMintableTemplate",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "newCustomTemplate",
+						"type": "address"
+					}
+				],
+				"name": "ChangeCustomTemplate",
 				"type": "event"
 			},
 			{
@@ -166,6 +202,32 @@
 			},
 			{
 				"inputs": [],
+				"name": "_CUSTOM_ERC20_TEMPLATE_",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_CUSTOM_MINTABLE_ERC20_TEMPLATE_",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "_ERC20_TEMPLATE_",
 				"outputs": [
 					{
@@ -193,6 +255,54 @@
 			{
 				"inputs": [],
 				"name": "_OWNER_",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "_USER_CUSTOM_MINTABLE_REGISTRY_",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "_USER_CUSTOM_REGISTRY_",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -250,6 +360,11 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "totalSupply",
+						"type": "uint256"
+					},
+					{
 						"internalType": "string",
 						"name": "name",
 						"type": "string"
@@ -260,9 +375,102 @@
 						"type": "string"
 					},
 					{
+						"internalType": "uint8",
+						"name": "decimals",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tradeBurnRatio",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tradeFeeRatio",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "teamAccount",
+						"type": "address"
+					}
+				],
+				"name": "createCustomERC20",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "newCustomERC20",
+						"type": "address"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "initSupply",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "symbol",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "decimals",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tradeBurnRatio",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tradeFeeRatio",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "teamAccount",
+						"type": "address"
+					}
+				],
+				"name": "createCustomMintableERC20",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "newCustomMintableERC20",
+						"type": "address"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "totalSupply",
 						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "symbol",
+						"type": "string"
 					},
 					{
 						"internalType": "uint8",
@@ -294,6 +502,16 @@
 					{
 						"internalType": "address[]",
 						"name": "stds",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address[]",
+						"name": "customs",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address[]",
+						"name": "mintables",
 						"type": "address[]"
 					}
 				],
@@ -330,6 +548,32 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "newCustomMintableTemplate",
+						"type": "address"
+					}
+				],
+				"name": "updateCustomMintableTemplate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newCustomTemplate",
+						"type": "address"
+					}
+				],
+				"name": "updateCustomTemplate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "newStdTemplate",
 						"type": "address"
 					}
@@ -355,8 +599,14 @@
 			"author": "DODO Breeder",
 			"kind": "dev",
 			"methods": {
-				"createStdERC20(string,string,uint256,uint8)": {
-					"details": "Create an ERC20 token."
+				"createCustomERC20(uint256,string,string,uint8,uint256,uint256,address)": {
+					"details": "Create a custom ERC20 token."
+				},
+				"createCustomMintableERC20(uint256,string,string,uint8,uint256,uint256,address)": {
+					"details": "Create a mintable ERC20 token."
+				},
+				"createStdERC20(uint256,string,string,uint8)": {
+					"details": "Create a standard ERC20 token."
 				}
 			},
 			"title": "DODO ERC20V2Factory",
@@ -371,7 +621,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/ERC20V3SimpleFactory.sol": "ERC20V3SimpleFactory"
+			"contracts/ERC20V3Factory.sol": "ERC20V3Factory"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -385,12 +635,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/ERC20V3SimpleFactory.sol": {
-			"keccak256": "0x131c3581456416c5e51941ce4875fcf65934934fd457ff77213289f36b89ebe5",
-			"license": "Apache-2.0",
+		"contracts/ERC20V3Factory.sol": {
+			"keccak256": "0x2504609acca5b49d5739ed1c01916f464fd457a5465ddd04a63a7cba03d8f388",
+			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://cedf2b5239869408e627b574f2b2c2ac09e90ba4821fb70d717015b6a0c3157c",
-				"dweb:/ipfs/QmWQdp1bRjWeLK8gSL9vhxZbCZRHtvxqPm1PCgfcYGFUAY"
+				"bzz-raw://70c658efb83de04a1cdef799474ff63eed5b96658ef0faade4965aa49ce05e98",
+				"dweb:/ipfs/QmfPWeAGg9mbggNwY2rZZKLVJZrhsePHmHRcfgZZxzRUa3"
 			]
 		}
 	},
